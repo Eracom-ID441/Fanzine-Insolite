@@ -1,11 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanzine Cater Pink DIY</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	votre article ici…
+    
+
+    <section class="sec2">
+            <h1 class="Bandrole">Fanzine Tunic</h1>
+            <br>
+        <article>
+
+<h1 class="sous-titre">qui ou quoi ?</h1>
+<p class="page1">Tunic est un jeu d’aventure et d’action dans lequel je guide un petit renard à travers un monde mystérieux rempli de secrets, d’énigmes et de combats exigeants. Inspiré des grands classiques du genre, le jeu se distingue par son approche minimaliste : tout n’est pas expliqué, et c’est en explorant et en observant que je découvre peu à peu ses mécaniques et son univers.</p>
+</section>
+
+
+
+    <section class="sec2">
+        <article class="cadre">
+
+<article class="page2">
+            <img class="image1" src="images.jpg" alt="">
+        </article>
+
+<article>
+<h1 class="sous-titre">Ma vision</h1>
+<p>Je lance Tunic et je me sens immédiatement perdu… dans le bon sens du terme. Le jeu ne me prend pas par la main, il m’invite à observer, à expérimenter, à comprendre par moi-même. Chaque découverte devient une petite victoire personnelle.</p>
+<article>
+<h1 class="sous-titre">Découvre les règles par toi-même</h1>
+</article>
+    </section>
+        </article>
+
+
+
+    
+
+
+
+    <section class="couverture">
+        <article class="cadre">
+            <p>Le livre t’accompagne du début à la fin.</p>
+        </article>
+        <article class="cadre">
+            <p>Récupère toutes les pages pour débloquer toutes les parties des mystère !</p>
+        </article>
+    </section>
+
+    <section>
+        <img src="Manual-page-9.webp" alt="yes">
+    </section>
+
+    <section>
+        <img src="Manual-page-11.webp" alt="yes">
+    </section>
+
+    <section>
+        <img src="Manual-page-13.png" alt="yes">
+    </section>
+
+    <section>
+        <img src="Manual-page-15.webp" alt="yes">
+    </section>
+
+    <section>
+        <img src="Manual-page-17.webp" alt="yes">
+    </section>
+
+    <section>
+        <img src="Manual-page-34.webp" alt="yes">
+    </section>
+
+    <section>
+        <img src="Manual-page-43.webp" alt="yes">
+    </section>
+
+    <section>
+        <img src="Manual-page-44.webp" alt="yes">
+    </section>
+
+    <section>
+        <img src="Manual-page-49.png" alt="yes">
+    </section>
+
+    <section>
+        <img src="Manual-page-50.webp" alt="yes">
+    </section>
+
+    <section>
+        <img src="Manual-back-cover.webp" alt="yes">
+    </section>
+
+
+
+
+
+    <section class="sec2">
+        <article class="cadre">
+
+<article class="page2">
+            <img class="image1" src="arrow.webp" alt="">
+        </article>
+
+<article>
+<h1 class="sous-titre">le secret ?</h1>
+<p>Indice page 43-44 et solution page 49.</p>
+<article>
+<h1 class="sous-titre">Découvre le part toi même !</h1>
+</article>
+    </section>
+        </article>
+
+
+
+
+<script>
+    // Convertir le scroll vertical en scroll horizontal
+window.addEventListener("wheel", function (e) {
+    e.preventDefault();                       // Empêche le scroll vertical
+    window.scrollBy({
+        left: e.deltaY,                       // Utilise le scroll vertical pour aller horizontalement
+        behavior: "smooth"
+    });
+}, { passive: false });
+
+
+
+// code avec les flèche direct : H G B G H   G B D B G H G   H G B G H D H
+const konamiCode = [
+  "ArrowUp",
+  "ArrowLeft",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowUp",
+  "ArrowLeft",
+  "ArrowDown",
+  "ArrowRight",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowUp",
+  "ArrowLeft",
+  "ArrowUp",
+  "ArrowLeft",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowUp",
+  "ArrowRight",
+  "ArrowUp"
+];
+
+let konamiIndex = 0;
+
+document.addEventListener("keydown", function (e) {
+
+  if (e.key === konamiCode[konamiIndex]) {
+    konamiIndex++;
+
+    if (konamiIndex === konamiCode.length) {
+      window.location.href = "Tu-as-gagné.html";
+      konamiIndex = 0;
+    }
+
+  } else {
+    konamiIndex = 0;
+  }
+
+});
+
+
+
+</script>
+    
 </body>
 </html>
+
