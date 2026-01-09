@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0b0b0b;
+  color: #d0d0d0;
+  font-family: "Courier New", monospace;
+  line-height: 1.7;
+}
+
+/* CONTENEUR GLOBAL FLEXIBLE */
+main {
+  width: 100%;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 10vh 4vw 16vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18vh; /* l’espace grandit avec l’écran */
+}
+
+/* SECTIONS FLUIDES */
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BLOCS IMAGE/TEXTE ADAPTATIFS */
+figure {
+  width: 100%;
+  max-width: 60vw;
+  background: #050505;
+  border: 1px solid #222;
+  padding: 2.5vh 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+s
+/* IMAGES : GRANDISSENT AVEC LA PAGE */
+figure img {
+  width: 100%;
+  height: clamp(240px, 35vh, 420px);
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0.85) contrast(1.1);
+}
+
+/* TEXTE IMAGE : HAUTEUR COHÉRENTE MAIS FLUIDE */
+figcaption {
+  font-size: clamp(13px, 1.1vw, 16px);
+  min-height: 18vh;
+  color: #a8a8a8;
+  border-left: 2px solid #444;
+  padding-left: 1.2vw;
+  white-space: pre-line;
+}
+
+/* TEXTE SANS IMAGE */
+.text-zone {
+  width: 100%;
+  max-width: 60vw;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+
+.text-zone p {
+  min-height: 14vh;
+  border-bottom: 1px dashed #333;
+  padding-bottom: 2vh;
+  font-size: clamp(14px, 1.1vw, 16px);
+  color: #b0b0b0;
+  white-space: pre-line;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+  figure,
+  .text-zone {
+    max-width: 92vw;
+  }
+
+  figcaption {
+    min-height: auto;
+  }
+}
