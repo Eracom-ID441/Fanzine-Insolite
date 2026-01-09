@@ -96,8 +96,12 @@
       const peter = document.getElementById("peter");
       const audio = new Audio("peter.mp3");
       peter.addEventListener("click", () => {
+        console.log("Peter clicked");
         audio.currentTime = 0;
-        audio.play();
+        audio.play(); 
+        audio.play().catch(err => console.error(err));
+
+        
       });
     </script>
   </body>
