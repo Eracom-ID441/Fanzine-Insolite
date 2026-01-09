@@ -1,53 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Insolite</title>
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insolite</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
-		* { margin:0; box-sizing: border-box; }
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "JetBrains Mono", monospace, sans-serif;
+      }
+      a {
+        font-weight: 500;
+      }
+      a b {
+        font-weight: 9999;
+      }
+
+      body {
+        color: #f1357a;
+      }
+      a {
+        color: inherit;
+        text-decoration-style: wavy;
+        text-underline-offset: 0.5em;
+        background: linear-gradient(
+          90deg,
+          hsl(from #f1357a calc(h + 180) 100% l / 0),
+          hsl(from #f1357a calc(h + 180) 100% l / 0.2)
+        );
+      }
+
+      a:hover {
+        background: hsl(from #f1357a calc(h + 180) 100% l);
+      }
+
+      body > * {
+        border: 2px solid;
+        border-style: dotted;
+        padding: 1em;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+      }
+      #peter {
+        border: none;
+        position: absolute;
+        z-index: 1000;
+        width: 280px;
+        rotate: 25deg;
+        top: 50%;
+        left: 80%;
 		
-		body{ font-family: "JetBrains Mono", monospace, sans-serif; }
-		a { font-weight: 500; }
-		a b { font-weight: 9999; }
+      }
 
-		body{ color: #f1357A; }
-		a { 
-			color: inherit; 
-			text-decoration-style: wavy;
-			text-underline-offset: 0.5em;
-			background: linear-gradient(90deg, hsl(from #f1357A calc( h + 180) 100% l / 0), hsl(from #f1357A calc( h + 180) 100% l / 0.2) ); 
-		}
-		
-		a:hover { background: hsl(from #f1357A calc( h + 180) 100% l); } 
+	  #peter:hover {
+		cursor: pointer;
+	  }
+    </style>
 
 
-		body > * { 
-			border: 2px solid;
-			border-style: dotted;
-			padding: 1em;
-		}
-
-
-		body{ display: flex; flex-direction: column; gap: 1rem; padding: 1rem; }
-
-	</style>
-</head>
-<body>
-	<h1><a href="https://fr.wikipedia.org/wiki/Wikipédia:Articles_insolites">Wikipédia:Articles insolites</a></h1>
-	<a href="Kelvin_Aderemi/index.html">Kelvin	Aderemi</a>
-	<a href="Maxime_Buchmann/index.html">Maxime	Buchmann</a>
-	<a href="Maksym_Burbeza/index.html">Maksym	Burbeza</a>
-	<a href="Matheo_Delessert/index.html">Mathéo	Delessert</a>
-	<a href="Basile-Lucien_Friderici/index.html">Basile Lucien	Friderici</a>
-	<a href="Lea_Leguizamon-Acosta/index.html">Léa	Leguizamon Acosta</a>
-	<a href="https://dinnomo.github.io/Schems_Mahfoudh_FANZINE-GARAGE/">Schems-Eden	Mahfoudh: <b>“Garage”</b></a>
-	<a href="Maxime_Margot/index.html">Maxime	Margot</a>
-	<a href="Illia_Melnichenko/index.html">Illia	Melnichenko</a>
-	<a href="Godwin_Nyakossi-Kodjo/index.html">Godwin	Nyakossi-Kodjo</a>
-	<a href="Andrea_Olarte/index.html">Andrea	Olarte</a>
-	<a href="Melissa_Zimmermann/index.html">Melissa	Zimmermann</a>
-</body>
+  </head>
+  <body>
+    <img id="peter" src="peter.png" alt="Peter" />
+    <h1>
+      <a href="https://fr.wikipedia.org/wiki/Wikipédia:Articles_insolites"
+        >Wikipédia:Articles insolites</a
+      >
+    </h1>
+    <a href="Kelvin_Aderemi/index.html">Kelvin Aderemi</a>
+    <a href="Maxime_Buchmann/index.html">Maxime Buchmann</a>
+    <a href="Maksym_Burbeza/index.html">Maksym Burbeza</a>
+    <a href="Matheo_Delessert/index.html">Mathéo Delessert</a>
+    <a href="Basile-Lucien_Friderici/index.html">Basile Lucien Friderici</a>
+    <a href="Lea_Leguizamon-Acosta/index.html">Léa Leguizamon Acosta</a>
+    <a href="https://dinnomo.github.io/Schems_Mahfoudh_FANZINE-GARAGE/"
+      >Schems-Eden Mahfoudh: <b>“Garage”</b></a
+    >
+    <a href="Maxime_Margot/index.html">Maxime Margot</a>
+    <a href="Illia_Melnichenko/index.html">Illia Melnichenko</a>
+    <a href="Godwin_Nyakossi-Kodjo/index.html">Godwin Nyakossi-Kodjo</a>
+    <a href="Andrea_Olarte/index.html">Andrea Olarte</a>
+    <a href="Melissa_Zimmermann/index.html">Melissa Zimmermann</a>
+	    <script>
+      const peter = document.getElementById("peter");
+      const audio = new Audio("peter.mp3");
+      peter.addEventListener("click", () => {
+        audio.currentTime = 0;
+        audio.play();
+      });
+    </script>
+  </body>
 </html>
